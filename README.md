@@ -21,9 +21,10 @@
 items = soup.select(".td-wrap-in")
 school, scores = [], [[] for i in range(7)]
 # ...
-item =[]
+
+item = []  # container for [school, score, score, ...]
 for index in range(len(items)):
-    # there are 8 indicators
+    # there are 7 indicators
     if(index % 8 == 0):
         item.append(items[index].contents[0].contents[0])
     else:
@@ -34,10 +35,11 @@ for index in range(len(items)):
             item.append("NULL")  # NULL score
 
     if(index % 8 == 7):  # append row to list
-        school.append(item[0])
+        school.append(item[0])  # the first element
         if(len(item) != 8):  # abnormal data
             print(item)
-        for i in range(len(scores)):
+        
+        for i in range(len(scores)):  # other scores
             scores[i].append(item[i+1])
         item =[]
         continue
