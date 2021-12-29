@@ -10,6 +10,7 @@
     - pandas
 - output : `.csv` files 
 - website : [QS World University Rankings 2022 ](https://www.topuniversities.com/university-rankings/world-university-rankings/2022)
+- \* reqiured : 需要先將 [webdriver (chrome) ](https://sites.google.com/a/chromium.org/chromedriver/downloads) 載下來並放在執行資料夾
 
 ## Code
 一頁一頁地把資料抓下來，直到 Selenium 無法再找到 `next` 按鈕可以繼續。
