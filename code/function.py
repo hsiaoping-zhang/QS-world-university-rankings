@@ -49,6 +49,9 @@ def write_df_csv(rank, school, scores):
 
     df["Rank"] = rank
     df["University"] = school
+
+    indicators = ["Overall Score", "International Students Ratio", "International Faculty Ratio", 
+            "Faculty Student Ratio", "Citations per Faculty", "Academic Reputation", "Employer Reputation"]
     
     for index in range(len(indicators)):
         df[indicators[index]] = scores[index]
