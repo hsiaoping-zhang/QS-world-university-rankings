@@ -15,6 +15,9 @@
 ## Code
 一頁一頁地把資料抓下來，直到 Selenium 無法再找到 `next` 按鈕可以繼續。
 
+在 `code/` 資料夾底下執行 `python main.py` 即可產生 `QS-2022-ranking.csv`
+
+### Function
 `get_indicator_scores`(string) : 獲取某一頁面的學校和成績資料
 > element(class) filter : `.td-wrap-in`
 
